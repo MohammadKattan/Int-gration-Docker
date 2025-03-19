@@ -32,8 +32,9 @@ jobs:
 
       - name: Configurer Kubeconfig
         run: |
-          echo "${{ secrets.KUBECONFIG }}" | base64 --decode > ~/.kube/config
-          chmod 600 ~/.kube/config
+          mkdir -p $HOME/.kube  # Crée le dossier ~/.kube s'il n'existe pas
+          echo "${{ secrets.KUBECONFIG }}" | base64 --decode > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config  # Assure que kubectl peut lire le fichier
 
       - name: Vérifier la connexion à Kubernetes
         run: kubectl cluster-info
