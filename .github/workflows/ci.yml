@@ -23,23 +23,35 @@ jobs:
         run: |
           docker tag mohamadk839/hello-world-node:${{ github.sha }} mohamadk839/hello-world-node:latest
           docker push mohamadk839/hello-world-node:latest
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Installer Kind
-        uses: helm/kind-action@v1.8.0
-
-      - name: Vérifier la connexion à Kubernetes
-        run: kubectl cluster-info
-
-      - name: Installer kubectl
-        uses: azure/setup-kubectl@v3
         with:
           version: 'latest'
+
+      - name: Installer Kind
+        run: |
+          curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
+          chmod +x ./kind
+          sudo mv ./kind /usr/local/bin/kind
+
+      - name: Créer un cluster Kind
+        run: kind create cluster
+
+      - name: Vérifier la connectivité du cluster
+        run: kubectl cluster-info
+
+      - name: Afficher la configuration (debug)
+        run: cat $HOME/.kube/config
+
+      - name: Verify kubectl connectivity
+        run: kubectl cluster-info
+
+      - name : déployer l'application
+        run : |
+          kubectl apply -f deployment.yml
 
       - name: Déployer sur Kubernetes
         run: |
