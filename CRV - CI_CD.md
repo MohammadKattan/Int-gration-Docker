@@ -110,7 +110,7 @@ Ajouter une étape de déploiement au pipeline GitHub Actions dans `ci.yml` :
 - Vérifier le déploiement :
 ```bash
 kubectl get pods
-kubectl get service hello-world-service
+kubectl get service hello-world-node-service
 ```
 
 - Testez l'application via le navigateur à l’adresse IP fournie par le service LoadBalancer.

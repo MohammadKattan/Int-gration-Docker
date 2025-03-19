@@ -23,16 +23,16 @@ jobs:
         run: |
           docker tag mohamadk839/hello-world-node:${{ github.sha }} mohamadk839/hello-world-node:latest
           docker push mohamadk839/hello-world-node:latest
-deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: azure/setup-kubectl@v3
-        with:
-          version: 'latest'
-      - name: Déployer sur Kubernetes
-        run: |
-          kubectl set image deployment/hello-world-node hello-world-node=mohamadk839/hello-world-node:latest --record
-        env:
-          KUBECONFIG: ${{ secrets.KUBECONFIG }}
+  deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: azure/setup-kubectl@v3
+          with:
+            version: 'latest'
+        - name: Déployer sur Kubernetes
+          run: |
+            kubectl set image deployment/hello-world-node hello-world-node=mohamadk839/hello-world-node:latest --record
+          env:
+            KUBECONFIG: ${{ secrets.KUBECONFIG }}
