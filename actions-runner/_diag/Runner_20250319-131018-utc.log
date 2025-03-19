@@ -216,3 +216,53 @@
 [2025-03-19 13:36:41Z INFO JobNotification] Entering JobCompleted Notification
 [2025-03-19 13:36:41Z INFO JobNotification] Entering EndMonitor
 [2025-03-19 13:36:41Z INFO MessageListener] Received job status event. JobState: Online
+[2025-03-19 13:40:54Z INFO MessageListener] Message '776456873882156151' received from session 'b056f778-d1c8-4c6e-ac7d-a546d8f44a8f'.
+[2025-03-19 13:40:54Z INFO ConfigurationStore] HasCredentials()
+[2025-03-19 13:40:54Z INFO ConfigurationStore] stored True
+[2025-03-19 13:40:54Z INFO CredentialManager] GetCredentialProvider
+[2025-03-19 13:40:54Z INFO CredentialManager] Creating type OAuth
+[2025-03-19 13:40:54Z INFO CredentialManager] Creating credential type: OAuth
+[2025-03-19 13:40:54Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/.credentials_rsaparams
+[2025-03-19 13:40:54Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/.credentials_rsaparams
+[2025-03-19 13:40:54Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/.credentials_rsaparams
+[2025-03-19 13:40:55Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-03-19 13:40:56Z INFO JobDispatcher] Job request 0 for plan 814adb5b-2807-4cab-b69f-195c657a9a88 job def961e9-713c-5251-8d15-04a8ec8c938a received.
+[2025-03-19 13:40:56Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-03-19 13:40:56Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-03-19 13:40:56Z INFO JobDispatcher] Job request 516b4597-1589-5f1d-b005-6f100c24a685 processed succeed.
+[2025-03-19 13:40:56Z INFO Terminal] WRITE LINE: 2025-03-19 13:40:56Z: Running job: deploy
+[2025-03-19 13:40:56Z INFO JobDispatcher] Start renew job request 0 for job def961e9-713c-5251-8d15-04a8ec8c938a.
+[2025-03-19 13:40:56Z INFO JobDispatcher] Successfully renew job def961e9-713c-5251-8d15-04a8ec8c938a, job is valid till 3/19/2025 1:50:56 PM
+[2025-03-19 13:40:56Z INFO HostContext] Well known directory 'Bin': '/Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/bin'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper] Starting process:
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   File name: '/Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/bin/Runner.Worker'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 150 153'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Working directory: '/Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/bin'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-03-19 13:40:56Z INFO ProcessInvokerWrapper] Process started with process id 92084, waiting for process exit.
+[2025-03-19 13:40:56Z INFO JobDispatcher] Send job request message to worker for job def961e9-713c-5251-8d15-04a8ec8c938a.
+[2025-03-19 13:40:56Z INFO ProcessChannel] Sending message of length 20755, with hash 'eda82db5a2bcc98eca04857e5c42c1b1666d08a33b634410ed4802b5da30b796'
+[2025-03-19 13:40:56Z INFO JobNotification] Entering JobStarted Notification
+[2025-03-19 13:40:56Z INFO JobNotification] Entering StartMonitor
+[2025-03-19 13:41:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-03-19 13:41:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-03-19 13:41:18Z INFO ProcessInvokerWrapper] Finished process 92084 with exit code 102, and elapsed time 00:00:22.0357513.
+[2025-03-19 13:41:18Z INFO JobDispatcher] Worker finished for job def961e9-713c-5251-8d15-04a8ec8c938a. Code: 102
+[2025-03-19 13:41:18Z INFO JobDispatcher] finish job request for job def961e9-713c-5251-8d15-04a8ec8c938a with result: Failed
+[2025-03-19 13:41:18Z INFO Terminal] WRITE LINE: 2025-03-19 13:41:18Z: Job deploy completed with result: Failed
+[2025-03-19 13:41:18Z INFO JobDispatcher] Stop renew job request for job def961e9-713c-5251-8d15-04a8ec8c938a.
+[2025-03-19 13:41:18Z INFO JobDispatcher] job renew has been cancelled, stop renew job def961e9-713c-5251-8d15-04a8ec8c938a.
+[2025-03-19 13:41:18Z INFO JobNotification] Entering JobCompleted Notification
+[2025-03-19 13:41:18Z INFO JobNotification] Entering EndMonitor
+[2025-03-19 13:41:18Z INFO MessageListener] Received job status event. JobState: Online
+[2025-03-19 14:01:04Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/.credentials_rsaparams
+[2025-03-19 14:01:05Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-03-19 14:06:07Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/kattan/Desktop/cfa/CRV/inegration-git-docker/actions-runner/.credentials_rsaparams
+[2025-03-19 14:06:07Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-03-19 14:11:09Z INFO MessageListener] No message retrieved from session 'b056f778-d1c8-4c6e-ac7d-a546d8f44a8f' within last 30 minutes.
