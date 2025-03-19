@@ -43,4 +43,4 @@ jobs:
 
       - name: Déployer sur Kubernetes
         run: |
-          kubectl set image deployment/hello-world-node hello-world-node=mohamadk839/hello-world-node:latest
+          kubectl set image deployment/hello-world-node hello-world-node=mohamadk839/hello-world-node:latest --record
