@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "MohammadKattan/Int-gration-Docker",
+  "pipelineDirectory": "Int-gration-Docker",
+  "workspaceDirectory": "Int-gration-Docker/Int-gration-Docker",
+  "repositories": {
+    "MohammadKattan/Int-gration-Docker": {
+      "repositoryPath": "Int-gration-Docker/Int-gration-Docker",
+      "lastRunOn": "03/19/2025 14:18:08 +01:00"
+    }
+  },
+  "lastRunOn": "03/19/2025 14:33:55 +01:00"
+}
