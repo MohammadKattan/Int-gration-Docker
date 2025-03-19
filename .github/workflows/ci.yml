@@ -51,7 +51,7 @@ jobs:
 
       - name : déployer l'application
         run : |
-          kubectl apply -f deployment.yml
+          kubectl apply -f deployment.yaml
 
       - name: Déployer sur Kubernetes
         run: |
