@@ -1,4 +1,4 @@
-# Int-gration-Docker
+# Intégration-Docker
 ## Déploiement
 
 ### 1. Méthode avec une image Docker locale
