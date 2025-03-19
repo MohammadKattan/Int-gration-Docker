@@ -6,30 +6,11 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         name: Checkout du code source
-
-      - name: Construire l'image Docker
-        run: |
-          docker build -t mohamadk839/hello-world-node:${{ github.sha }} .
-
-      - name: Connexion à Docker Hub
-        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-
-      - name: Pousser l'image Docker
-        run: |
-          docker tag mohamadk839/hello-world-node:${{ github.sha }} mohamadk839/hello-world-node:latest
-          docker push mohamadk839/hello-world-node:latest
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          version: 'latest'
 
       - name: Installer Kind
         run: |
@@ -46,13 +27,7 @@ jobs:
       - name: Afficher la configuration (debug)
         run: cat $HOME/.kube/config
 
-      - name: Verify kubectl connectivity
-        run: kubectl cluster-info
-
-      - name : déployer l'application
-        run : |
-          kubectl apply -f deployment.yaml
-
-      - name: Déployer sur Kubernetes
+      - name: Déployer l'application avec l'image de Docker Hub
         run: |
+          kubectl apply -f deployment.yaml
           kubectl set image deployment/hello-world-node hello-world-node=mohamadk839/hello-world-node:latest

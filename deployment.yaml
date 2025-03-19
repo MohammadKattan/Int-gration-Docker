@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: hello-world-node
-        image: mohamadk839/hello-world-node:v1
+        image: mohamadk839/hello-world-node:latest
         ports:
           - containerPort: 3000
